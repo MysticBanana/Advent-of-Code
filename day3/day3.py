@@ -1,7 +1,7 @@
 from operator import add
 
 with open("input.txt", "r") as f:
-    lines =  f.readlines()
+    lines = f.readlines()
 
 # part 1
 mcb = [0] * 12
@@ -9,21 +9,7 @@ for i in list(map(lambda x: [int(i) for i in x], map(lambda x: x.strip(),lines))
 print(int("".join([str(i) for i in [(0 if i < 500 else 1) for i in mcb]]), 2) * int("".join([str(i) for i in [(0 if i > 500 else 1) for i in mcb]]), 2))
 
 
-# part 2
-test = """00100
-11110
-10110
-10111
-10101
-01111
-00111
-11100
-10000
-11001
-00010
-01010"""
-
-
+# part 2 - unfinished but works
 
 l = [i for i in list(map(lambda x: [int(i) for i in x], map(lambda x: x.strip(),lines)))]
 
