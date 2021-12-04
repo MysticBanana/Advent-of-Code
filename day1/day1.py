@@ -10,19 +10,8 @@ def count_increased_element(counting: list, step: int = 0):
 if __name__ == "__main__":
     with open("input.txt", "r") as f:
         counting = list()
-        counting_sums = list()
         for i in f.readlines():
             counting.append(int(i.strip()))
-
-        temp = list()
-        for i in counting:
-            if len(temp) == NUM_OF_SUM:
-                counting_sums.append(sum(temp))
-                temp = []
-            temp.append(i)
-
-
-        print(counting)
 
         # silver
         print(count_increased_element(counting))
